@@ -43,12 +43,14 @@ class MainActivity : AppCompatActivity() {
         val pref = getPreferences(Context.MODE_PRIVATE)
         val isLoggedIn = pref.getBoolean("isLoggedIn", false)
 
-        if (!isLoggedIn) {
+        intent = Intent(this, HomeActivity::class.java)
+        intent.putExtra("id", pref.getInt("id", 0))
+        /*if (!isLoggedIn) {
             intent = Intent(this, LoginActivity::class.java)
         } else {
             intent = Intent(this, HomeActivity::class.java)
             intent.putExtra("id", pref.getInt("id", 0))
-        }
+        }*/
 
         startActivity(intent)
 

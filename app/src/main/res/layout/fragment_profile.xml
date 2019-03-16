@@ -77,7 +77,6 @@
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/myLibrary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -85,13 +84,17 @@
                 android:orientation="vertical">
 
             <LinearLayout
+                    android:id="@+id/myLibrary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
                     android:paddingLeft="16dp"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
 
                 <FrameLayout
                         android:layout_width="30dp"
@@ -122,12 +125,14 @@
                     android:id="@+id/rentedBooks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
                     android:paddingLeft="16dp"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
 
                 <FrameLayout
                         android:layout_width="30dp"
@@ -159,12 +164,14 @@
                     android:id="@+id/wishList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:clickable="true"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
                     android:paddingLeft="16dp"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
 
                 <FrameLayout
                         android:layout_width="30dp"

@@ -35,6 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
         showExploreFragment()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        navigation.selectedItemId = R.id.navigation_explore
     }
 
     private fun showNotificationsFragment() {
