@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".profile.wishlist.MyWishListActivity">
         </activity>
+        <activity android:name=".explore.CategoriesActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -33,5 +33,13 @@
             android:layout_height="match_parent"
             android:layout_marginTop="?attr/actionBarSize">
 
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/notifications_recycler_view"
+                android:scrollbars="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
     </LinearLayout>
 </FrameLayout>

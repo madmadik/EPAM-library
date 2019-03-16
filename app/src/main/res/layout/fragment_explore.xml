@@ -151,7 +151,7 @@
                     android:layout_alignParentLeft="true"/>
 
             <LinearLayout
-                    android:id="@+id/categories_see_all"
+                    android:id="@+id/top_see_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
