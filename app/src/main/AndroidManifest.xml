@@ -16,12 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity
+                android:name=".LoginActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
         <activity
                 android:name=".HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".RegisterActivity"
+                  android:theme="@style/AppTheme.NoActionBar"
+                  android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
         <activity android:name=".profile.mylibrary.MyLibraryActivity">
         </activity>
