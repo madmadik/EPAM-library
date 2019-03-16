@@ -1,10 +1,11 @@
-package kz.epamlibrary
+package kz.epamlibrary.base
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TextInputEditText
 import android.view.View
+import kz.epamlibrary.R
 
 class LoginActivity : AppCompatActivity() {
 

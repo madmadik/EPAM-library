@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,16 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".LoginActivity"
+                android:name=".base.LoginActivity"
                 android:theme="@style/AppTheme.NoActionBar"
                 android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
         <activity
-                android:name=".HomeActivity"
+                android:name=".base.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".RegisterActivity"
+        <activity android:name=".base.RegisterActivity"
                   android:theme="@style/AppTheme.NoActionBar"
                   android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
