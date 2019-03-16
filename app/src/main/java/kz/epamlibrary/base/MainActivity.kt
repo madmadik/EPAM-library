@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         //fetchUsersList()
 
-
         lateinit var intent: Intent
         val pref = getPreferences(Context.MODE_PRIVATE)
         val isLoggedIn = pref.getBoolean("isLoggedIn", false)
