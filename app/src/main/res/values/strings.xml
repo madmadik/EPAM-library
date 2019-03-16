@@ -14,4 +14,6 @@
     <string name="label_author">Author</string>
     <string name="label_year">Year of publication</string>
     <string name="label_description">Description</string>
+    <string name="button_lazy">I am lazy</string>
+    <string name="label_delete_book">Delete book</string>
 </resources>

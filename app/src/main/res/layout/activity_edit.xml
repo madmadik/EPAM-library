@@ -102,5 +102,29 @@
                 android:hint="@string/label_description"
                 android:lines="2"
                 android:maxLength="500"/>
+
+        <Button
+                android:id="@+id/lazy_button"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:textAllCaps="true"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_lazy"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        <Button
+                android:id="@+id/delete_button"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:textAllCaps="true"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:text="@string/label_delete_book"
+                android:backgroundTint="@color/colorRed"/>
     </LinearLayout>
+
+
 </FrameLayout>
