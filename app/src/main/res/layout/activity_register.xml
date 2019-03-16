@@ -5,8 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity">
-
+        tools:context=".RegisterActivity">
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -34,6 +33,16 @@
                     android:hint="Phone Number"/>
 
             <android.support.design.widget.TextInputEditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="80dp"
+                    android:imeOptions="actionDone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="80dp"
+                    android:hint="Full Name"/>
+
+            <android.support.design.widget.TextInputEditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -43,27 +52,25 @@
                     android:layout_marginRight="80dp"
                     android:hint="Password"/>
 
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/repeatPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="80dp"
+                    android:imeOptions="actionDone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="80dp"
+                    android:hint="Repeat Password"/>
+
             <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@drawable/ic_login_button"
+                    android:background="@drawable/ic_register_button"
                     android:layout_marginLeft="80dp"
-                    android:onClick="signIn"
+                    android:onClick="register"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"/>
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:textColor="@android:color/black"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginRight="80dp"
                     android:layout_marginBottom="80dp"
-                    android:textSize="12sp"
-                    android:onClick="registerClick"
-                    android:text="DOES NOT HAVE ACCOUNT YET? REGISTER"/>
+                    android:layout_marginRight="80dp"/>
         </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>
