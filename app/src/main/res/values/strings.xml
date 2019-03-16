@@ -30,4 +30,8 @@
     <string name="label_dont_have">Do not have account yet?</string>
     <string name="label_top">Top rated</string>
     <string name="title_categories">Categories</string>
+    <string name="title_details">Details</string>
+    <string name="label_add_wish_list">Add to Wish List</string>
+    <string name="button_rent">Rent</string>
+    <string name="button_reviews">Reviews</string>
 </resources>

@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".explore.CategoriesActivity">
         </activity>
+        <activity android:name=".explore.BookDetailActivity">
+        </activity>
     </application>
 
 </manifest>
