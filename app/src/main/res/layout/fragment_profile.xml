@@ -1,0 +1,195 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorEpamGray"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_avatar"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nurdaulet Yeltayev"
+                        android:textColor="@color/colorEpamGray"
+                        android:textSize="20sp"
+                        tools:text="Nurdaulet Yeltayev"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+77079601145"
+                        android:textColor="@color/colorEpamGray"
+                        android:textSize="16sp"
+                        tools:text="+770960145"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/myLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                <FrameLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_library"/>
+                </FrameLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingLeft="16dp"
+                        android:text="My Library"
+                        android:textColor="@color/colorEpamGray"
+                        android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <LinearLayout
+                    android:id="@+id/rentedBooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                <FrameLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_rent"/>
+                </FrameLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingLeft="16dp"
+                        android:text="Rented Books"
+                        android:textColor="@color/colorEpamGray"
+                        android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <LinearLayout
+                    android:id="@+id/wishList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                <FrameLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_heart"/>
+                </FrameLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingLeft="16dp"
+                        android:text="My Wish List"
+                        android:textColor="@color/colorEpamGray"
+                        android:textSize="16sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

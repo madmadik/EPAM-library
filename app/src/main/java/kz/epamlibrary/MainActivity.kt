@@ -18,27 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("message")
-
-        myRef.setValue("Hello, World!")
-
-
-        // Read from the database
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue(String::class.java)
-                Log.d("YELTAYEV22", "Value is: " + value!!)
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w("YELTAYEV22", "Failed to read value.", error.toException())
-            }
-        })
-
         lateinit var intent: Intent
         val pref = getPreferences(Context.MODE_PRIVATE)
         val isLoggedIn = pref.getBoolean("isLoggedIn", false)

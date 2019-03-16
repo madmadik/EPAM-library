@@ -2,23 +2,27 @@ package kz.epamlibrary
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
+import kz.epamlibrary.explore.ExploreFragment
+import kz.epamlibrary.notifications.NotificationsFragment
+import kz.epamlibrary.profile.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_home -> {
-                message.setText(R.string.title_home)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_dashboard -> {
-                message.setText(R.string.title_dashboard)
-                return@OnNavigationItemSelectedListener true
-            }
             R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
+                showNotificationsFragment()
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_explore -> {
+                showExploreFragment()
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_profile -> {
+                showProfileFragment()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -29,6 +33,25 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        showExploreFragment()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+    }
+
+    private fun showNotificationsFragment() {
+        replaceFragment(NotificationsFragment())
+    }
+
+    private fun showExploreFragment() {
+        replaceFragment(ExploreFragment())
+    }
+
+    private fun showProfileFragment() {
+        replaceFragment(ProfileFragment())
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val transaction = this.supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.commit()
     }
 }

@@ -1,0 +1,43 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_my_library"
+                android:textAllCaps="true"
+                android:textColor="@color/colorEpamGray"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_library_recycler_view"
+                android:scrollbars="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</FrameLayout>
