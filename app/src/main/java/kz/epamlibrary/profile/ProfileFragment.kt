@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kz.epamlibrary.R
 import kz.epamlibrary.profile.mylibrary.MyLibraryActivity
+import kz.epamlibrary.profile.rentedbooks.RentedBooksActivity
+import kz.epamlibrary.profile.wishlist.MyWishListActivity
 
 class ProfileFragment : Fragment() {
 
@@ -35,10 +37,13 @@ class ProfileFragment : Fragment() {
     }
 
     private fun openRentedBooks() {
-
+        val intent = Intent(activity, RentedBooksActivity::class.java)
+        startActivity(intent)
     }
 
     private fun openMyWishList() {
+        val intent = Intent(activity, MyWishListActivity::class.java)
+        startActivity(intent)
     }
 
     }

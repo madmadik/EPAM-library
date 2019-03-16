@@ -27,13 +27,18 @@
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".base.RegisterActivity"
-                  android:theme="@style/AppTheme.NoActionBar"
-                  android:windowSoftInputMode="stateAlwaysHidden">
+        <activity
+                android:name=".base.RegisterActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
         <activity android:name=".profile.mylibrary.MyLibraryActivity">
         </activity>
         <activity android:name=".profile.mylibrary.EditActivity">
+        </activity>
+        <activity android:name=".profile.rentedbooks.RentedBooksActivity">
+        </activity>
+        <activity android:name=".profile.wishlist.MyWishListActivity">
         </activity>
     </application>
 

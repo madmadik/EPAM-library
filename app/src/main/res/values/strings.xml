@@ -19,4 +19,6 @@
     <string name="label_search_hint">search books, authors and etc.</string>
     <string name="label_categories">Categories</string>
     <string name="label_see_all">See all</string>
+    <string name="title_rented_books">Rented Books</string>
+    <string name="title_wish_list">My Wish List</string>
 </resources>
