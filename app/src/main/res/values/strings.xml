@@ -10,4 +10,8 @@
     <string name="by">by</string>
     <string name="owner">owner</string>
     <string name="title_edit">Edit</string>
+    <string name="label_title">Book Title</string>
+    <string name="label_author">Author</string>
+    <string name="label_year">Year of publication</string>
+    <string name="label_description">Description</string>
 </resources>

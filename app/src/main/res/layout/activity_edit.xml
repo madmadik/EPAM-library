@@ -33,14 +33,74 @@
                     android:textColor="@color/colorEpamGray"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
+
+            <ImageView
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_done"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
+            android:layout_marginTop="?attr/actionBarSize"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
 
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_add_cover"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp">
+
+                <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/label_title"/>
+
+                <EditText
+                        android:id="@+id/author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/label_author"/>
+
+                <EditText
+                        android:id="@+id/year"
+                        android:maxLength="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:hint="@string/label_year"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="@string/label_description"
+                android:lines="2"
+                android:maxLength="500"/>
     </LinearLayout>
 </FrameLayout>
