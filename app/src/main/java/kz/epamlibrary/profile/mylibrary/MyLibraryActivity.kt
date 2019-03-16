@@ -1,39 +1,42 @@
 package kz.epamlibrary.profile.mylibrary
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_my_library.view.*
+import kotlinx.android.synthetic.main.activity_my_library.*
 import kz.epamlibrary.R
 import kz.epamlibrary.adapter.BooksAdapter
 import kz.epamlibrary.entity.Book
 
-class MyLibraryFragment : Fragment() {
+class MyLibraryActivity : AppCompatActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecyclerView.Adapter<*>
     private var books = ArrayList<Book>()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_my_library, container, false)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_my_library)
 
         initBooks()
 
-        recyclerView = view.my_library_recycler_view
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.apply {
+        my_library_recycler_view.apply {
             setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = LinearLayoutManager(context)
             adapter = BooksAdapter(books)
         }
 
-        return view
+        add.setOnClickListener {
+            openEditBook()
+        }
+
+        back.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    private fun openEditBook() {
+        val intent = Intent(this, EditActivity::class.java)
+        startActivity(intent)
     }
 
     private fun initBooks() {
@@ -46,6 +49,5 @@ class MyLibraryFragment : Fragment() {
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
-
     }
 }

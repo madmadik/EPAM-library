@@ -23,6 +23,10 @@
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".profile.mylibrary.MyLibraryActivity">
+        </activity>
+        <activity android:name=".profile.mylibrary.EditActivity">
+        </activity>
     </application>
 
 </manifest>
