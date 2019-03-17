@@ -1,5 +1,7 @@
 package kz.epamlibrary.base
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -34,9 +36,18 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        showExploreFragment()
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        navigation.selectedItemId = R.id.navigation_explore
+        lateinit var intent: Intent
+        val pref = getPreferences(Context.MODE_PRIVATE)
+        val isLoggedIn = pref.getBoolean("isLoggedIn", false)
+
+        if (!isLoggedIn) {
+            intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        } else {
+            showExploreFragment()
+            navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+            navigation.selectedItemId = R.id.navigation_explore
+        }
     }
 
     private fun showNotificationsFragment() {
