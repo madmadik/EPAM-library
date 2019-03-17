@@ -35,7 +35,7 @@
             android:layout_marginTop="?attr/actionBarSize">
 
         <android.support.v7.widget.SearchView
-                android:id="@+id/search_view"
+                android:id="@+id/books_search_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -46,140 +46,155 @@
                 app:defaultQueryHint="@string/label_search_hint"
                 android:background="@drawable/search_view_background"/>
 
-        <RelativeLayout
+        <LinearLayout
+                android:id="@+id/explore_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
-
-            <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_categories"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorEpamGray"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_alignParentLeft="true"/>
-
-            <LinearLayout
-                    android:id="@+id/categories_see_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
 
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/label_see_all"
+                        android:text="@string/label_categories"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
                         android:textAllCaps="true"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/colorEpamGray"
                         android:textStyle="bold"
                         android:textSize="16sp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_alignParentLeft="true"/>
 
-                <ImageView
-                        android:id="@+id/arrow"
+                <LinearLayout
+                        android:id="@+id/categories_see_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_arrow"/>
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackground">
 
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_see_all"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                    <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_arrow"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_category_all"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginEnd="12dp"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_category_novel"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginEnd="12dp"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_category_history"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginEnd="12dp"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_category_design"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginEnd="12dp"/>
             </LinearLayout>
 
-        </RelativeLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="16dp">
-
-            <ImageView
-                    android:layout_width="wrap_content"
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_category_all"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginEnd="12dp"/>
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
 
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_category_novel"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginEnd="12dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_top"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorEpamGray"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_alignParentLeft="true"/>
 
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_category_history"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginEnd="12dp"/>
+                <LinearLayout
+                        android:id="@+id/top_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackground">
 
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_category_design"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginEnd="12dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_see_all"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_arrow"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
         </LinearLayout>
 
-        <RelativeLayout
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/books_recycler_view"
+                android:scrollbars="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_top"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorEpamGray"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_alignParentLeft="true"/>
-
-            <LinearLayout
-                    android:id="@+id/top_see_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:background="?attr/selectableItemBackground">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_see_all"
-                        android:textAllCaps="true"
-                        android:textColor="@color/gray"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginEnd="8dp"/>
-
-                <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_arrow"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
     </LinearLayout>
 </FrameLayout>

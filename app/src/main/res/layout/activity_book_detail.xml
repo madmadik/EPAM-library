@@ -70,7 +70,7 @@
 
                     <!--Title -->
                     <TextView
-                            android:id="@+id/title"
+                            android:id="@+id/bookTitle"
                             android:textSize="16sp"
                             android:textColor="@color/black"
                             android:textAllCaps="true"

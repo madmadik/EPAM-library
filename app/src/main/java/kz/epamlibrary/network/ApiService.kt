@@ -16,10 +16,14 @@ interface ApiService {
     @GET("http://10.3.27.146:8080/categories/all")
     fun fetchCategories(): Observable<List<Category>>
 
-    @GET("http://10.3.27.146:8080/books/{id}")
-    fun fetchBooksByCategory(@Path("id") id: Int): Observable<List<Book>>
+    @GET("http://10.3.27.146:8080/books")
+    fun fetchBooksByCategory(@Query("categoryId") id: Int): Observable<List<Book>>
 
     @GET("http://10.3.27.146:8080/books")
     fun searchForBook(@Query("title") searchText: String): Observable<List<Book>>
+
+    @GET("http://10.3.27.146:8080/books/{id}")
+    fun fetchBookInfo(@Path("id") id: Int): Observable<Book>
+
 
 }
