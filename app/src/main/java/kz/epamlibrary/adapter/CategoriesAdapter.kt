@@ -32,9 +32,13 @@ class CategoriesAdapter(private val categories: ArrayList<Category>) :
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
 
-        if (position % 2 == 0) {
-            holder.itemView.category_image.setImageResource(R.drawable.ic_category_all)
-        } else {
+        if (position % 4 == 0) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_arts)
+        } else if (position % 4 == 1) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_novel)
+        } else if (position % 4 == 2) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_history)
+        } else if (position % 4 == 3) {
             holder.itemView.category_image.setImageResource(R.drawable.ic_category_design)
         }
 

@@ -109,30 +109,34 @@
                     android:layout_margin="16dp">
 
                 <ImageView
+                        android:id="@+id/arts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_category_all"
+                        app:srcCompat="@drawable/ic_category_arts"
                         android:layout_marginRight="12dp"
                         android:layout_marginEnd="12dp"/>
 
                 <ImageView
+                        android:id="@+id/bibliographies"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_category_novel"
+                        app:srcCompat="@drawable/ic_category_bibliographies"
                         android:layout_marginRight="12dp"
                         android:layout_marginEnd="12dp"/>
 
                 <ImageView
+                        android:id="@+id/business"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_category_history"
+                        app:srcCompat="@drawable/ic_category_business"
                         android:layout_marginRight="12dp"
                         android:layout_marginEnd="12dp"/>
 
                 <ImageView
+                        android:id="@+id/calendars"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_category_design"
+                        app:srcCompat="@drawable/ic_category_calendars"
                         android:layout_marginRight="12dp"
                         android:layout_marginEnd="12dp"/>
             </LinearLayout>

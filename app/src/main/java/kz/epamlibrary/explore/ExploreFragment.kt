@@ -11,12 +11,12 @@ import android.view.View
 import android.view.ViewGroup
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import kotlinx.android.synthetic.main.fragment_explore.*
 import kotlinx.android.synthetic.main.fragment_explore.view.*
 import kz.epamlibrary.R
 import kz.epamlibrary.adapter.BooksAdapter
 import kz.epamlibrary.app.AppController
 import kz.epamlibrary.entity.Book
+import kz.epamlibrary.network.Constant
 
 class ExploreFragment : Fragment() {
 
@@ -52,6 +52,22 @@ class ExploreFragment : Fragment() {
 
         })
 
+        view.arts.setOnClickListener {
+            openArts()
+        }
+
+        view.bibliographies.setOnClickListener {
+            openBibliographies()
+        }
+
+        view.business.setOnClickListener {
+            openBusiness()
+        }
+
+        view.calendars.setOnClickListener {
+            openCalendars()
+        }
+
         return view
     }
 
@@ -76,5 +92,33 @@ class ExploreFragment : Fragment() {
             })
 
         compositeDisposable.add(disposable)
+    }
+
+    fun openArts() {
+        val intent = Intent(activity, CategorySearchActivity::class.java)
+        intent.putExtra(Constant.CATEGORY_ID, "1")
+        intent.putExtra(Constant.CATEGORY_NAME, "Arts")
+        activity?.startActivity(intent)
+    }
+
+    fun openBibliographies() {
+        val intent = Intent(activity, CategorySearchActivity::class.java)
+        intent.putExtra(Constant.CATEGORY_ID, "2")
+        intent.putExtra(Constant.CATEGORY_NAME, "Bibliographies")
+        activity?.startActivity(intent)
+    }
+
+    fun openBusiness() {
+        val intent = Intent(activity, CategorySearchActivity::class.java)
+        intent.putExtra(Constant.CATEGORY_ID, "3")
+        intent.putExtra(Constant.CATEGORY_NAME, "Business")
+        activity?.startActivity(intent)
+    }
+
+    fun openCalendars() {
+        val intent = Intent(activity, CategorySearchActivity::class.java)
+        intent.putExtra(Constant.CATEGORY_ID, "4")
+        intent.putExtra(Constant.CATEGORY_NAME, "Calendars")
+        activity?.startActivity(intent)
     }
 }
