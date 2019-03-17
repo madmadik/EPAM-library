@@ -16,7 +16,7 @@
                 android:layout_height="match_parent">
 
             <ImageView
-                    android:id="@+id/back"
+                    android:id="@+id/back_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_back"
@@ -45,5 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/categories_recycler_view"
+                android:scrollbars="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
     </LinearLayout>
 </FrameLayout>

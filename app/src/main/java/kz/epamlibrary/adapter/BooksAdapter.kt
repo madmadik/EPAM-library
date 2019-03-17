@@ -29,9 +29,9 @@ class BooksAdapter(private val books: ArrayList<Book>) :
 
         holder.itemView.title.text = book.title
         holder.itemView.author.text = book.author
-        holder.itemView.owner.text = book.owner
-        holder.itemView.category.text = book.category
-        holder.itemView.rate.text = book.rate
+        /*holder.itemView.owner.text = book.o*/
+        holder.itemView.category.text = book.categories[0].name
+        /*holder.itemView.rate.text = book*/
 
     }
 

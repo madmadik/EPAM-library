@@ -30,6 +30,7 @@ class MyWishListActivity : AppCompatActivity() {
     }
 
     private fun initBooks() {
+       /* books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
@@ -37,7 +38,6 @@ class MyWishListActivity : AppCompatActivity() {
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
         books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
-        books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
-        books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))
+        books.add(Book("The world of abstract art", "Emily Braun", "Nurda Yeltayev", "Design", "4.5"))*/
     }
 }
