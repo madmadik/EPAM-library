@@ -5,6 +5,7 @@ import io.reactivex.Observable
 import kz.epamlibrary.entity.Book
 import kz.epamlibrary.entity.Category
 import retrofit2.http.Path
+import retrofit2.http.Query
 import retrofit2.http.Url
 
 interface ApiService {
@@ -17,4 +18,8 @@ interface ApiService {
 
     @GET("http://10.3.27.146:8080/books/{id}")
     fun fetchBooksByCategory(@Path("id") id: Int): Observable<List<Book>>
+
+    @GET("http://10.3.27.146:8080/books")
+    fun searchForBook(@Query("title") searchText: String): Observable<List<Book>>
+
 }

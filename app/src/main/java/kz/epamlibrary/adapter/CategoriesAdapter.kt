@@ -42,6 +42,8 @@ class CategoriesAdapter(private val categories: ArrayList<Category>) :
             val intent = Intent(holder.itemView.context, CategorySearchActivity::class.java)
             intent.putExtra(CATEGORY_ID, category.id)
             intent.putExtra(CATEGORY_NAME, category.name)
+
+            holder.itemView.context.startActivity(intent)
         }
     }
 

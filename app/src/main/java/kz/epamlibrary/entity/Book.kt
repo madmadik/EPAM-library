@@ -1,6 +1,7 @@
 package kz.epamlibrary.entity
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class Book(
     @SerializedName("author")
@@ -8,9 +9,9 @@ data class Book(
     @SerializedName("categories")
     var categories: List<Category>,
     @SerializedName("dateCreated")
-    var dateCreated: Long,
+    var dateCreated: Date,
     @SerializedName("dateModified")
-    var dateModified: Long,
+    var dateModified: Date,
     @SerializedName("description")
     var description: String,
     @SerializedName("id")
