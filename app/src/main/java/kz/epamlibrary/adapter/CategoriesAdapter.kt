@@ -32,14 +32,24 @@ class CategoriesAdapter(private val categories: ArrayList<Category>) :
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
 
-        if (position % 4 == 0) {
+        if (position % 7 == 0) {
             holder.itemView.category_image.setImageResource(R.drawable.ic_category_arts)
-        } else if (position % 4 == 1) {
+        } else if (position % 7 == 1) {
             holder.itemView.category_image.setImageResource(R.drawable.ic_category_novel)
-        } else if (position % 4 == 2) {
+        } else if (position % 7 == 2) {
             holder.itemView.category_image.setImageResource(R.drawable.ic_category_history)
-        } else if (position % 4 == 3) {
+        } else if (position % 7 == 3) {
             holder.itemView.category_image.setImageResource(R.drawable.ic_category_design)
+        } else if (position % 7 == 4) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_all)
+        } else if (position % 7 == 5) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_bibliographies)
+        } else if (position % 7 == 6) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_business)
+        } else if (position % 7 == 7) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_law)
+        } else if (position % 7 == 8) {
+            holder.itemView.category_image.setImageResource(R.drawable.ic_category_calendars)
         }
 
         holder.itemView.setOnClickListener {

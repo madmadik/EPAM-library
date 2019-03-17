@@ -68,6 +68,24 @@ class ExploreFragment : Fragment() {
             openCalendars()
         }
 
+        view.cover_1.setOnClickListener {
+            val intent = Intent(activity, BookDetailActivity::class.java)
+            intent.putExtra(Constant.BOOK_ID, 345678)
+            activity?.startActivity(intent)
+        }
+
+        view.cover_2.setOnClickListener {
+            val intent = Intent(activity, BookDetailActivity::class.java)
+            intent.putExtra(Constant.BOOK_ID, 112233)
+            activity?.startActivity(intent)
+        }
+
+        view.cover_3.setOnClickListener {
+            val intent = Intent(activity, BookDetailActivity::class.java)
+            intent.putExtra(Constant.BOOK_ID, 345678)
+            activity?.startActivity(intent)
+        }
+
         return view
     }
 

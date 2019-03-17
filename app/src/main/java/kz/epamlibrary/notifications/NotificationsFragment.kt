@@ -31,14 +31,13 @@ class NotificationsFragment: Fragment() {
 
     private fun initNotifications() {
         notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
+        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Rejected"))
         notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
+        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Waiting"))
         notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
+        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Rejected"))
         notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Accepted"))
-
+        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Waiting"))
+        notifications.add(Notification("Zhuma хочет арендовать вашу книгу “Java for Dummies” ...", "12 March 2019", "Rejected"))
     }
 }
