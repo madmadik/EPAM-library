@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_book.view.*
 import kz.epamlibrary.R
-import kz.epamlibrary.R.id.category
 import kz.epamlibrary.entity.Book
 import kz.epamlibrary.explore.BookDetailActivity
-import kz.epamlibrary.explore.CategorySearchActivity
 import kz.epamlibrary.network.Constant
 
 class BooksAdapter(private val books: ArrayList<Book>) :
@@ -20,8 +18,10 @@ class BooksAdapter(private val books: ArrayList<Book>) :
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): BooksAdapter.BookViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BooksAdapter.BookViewHolder {
         val item = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_book, parent, false)
 
@@ -34,7 +34,9 @@ class BooksAdapter(private val books: ArrayList<Book>) :
         holder.itemView.title.text = book.title
         holder.itemView.author.text = book.author
         /*holder.itemView.owner.text = book.o*/
-        holder.itemView.category.text = book.categories[0].name
+        if (book.categories.size > 0) {
+            holder.itemView.category.text = book.categories[0].name
+        }
         /*holder.itemView.rate.text = book*/
 
         holder.itemView.setOnClickListener {

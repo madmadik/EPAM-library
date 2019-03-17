@@ -126,7 +126,7 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textAllCaps="true"
-                                tools:text="4.5"/>
+                                android:text="4.5"/>
                     </LinearLayout>
 
                     <LinearLayout

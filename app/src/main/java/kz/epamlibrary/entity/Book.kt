@@ -9,15 +9,15 @@ data class Book(
     @SerializedName("categories")
     var categories: List<Category>,
     @SerializedName("dateCreated")
-    var dateCreated: Date,
+    var dateCreated: Date?,
     @SerializedName("dateModified")
-    var dateModified: Date,
+    var dateModified: Date?,
     @SerializedName("description")
     var description: String,
     @SerializedName("id")
-    var id: Int,
+    var id: Int?,
     @SerializedName("image")
-    var image: Any,
+    var image: Any?,
     @SerializedName("title")
     var title: String
 )

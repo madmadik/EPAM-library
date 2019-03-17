@@ -36,18 +36,18 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        lateinit var intent: Intent
+        /*lateinit var intent: Intent
         val pref = getPreferences(Context.MODE_PRIVATE)
         val isLoggedIn = pref.getBoolean("isLoggedIn", false)
 
         if (!isLoggedIn) {
             intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-        } else {
+        } else {*/
             showExploreFragment()
             navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
             navigation.selectedItemId = R.id.navigation_explore
-        }
+        //}
     }
 
     private fun showNotificationsFragment() {

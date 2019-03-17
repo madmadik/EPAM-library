@@ -42,7 +42,9 @@ class BookDetailActivity : AppCompatActivity() {
 
                 author.text = book.author
                 bookTitle.text = book.title
-                category.text = book.categories[0].name
+                if (book.categories.size > 0) {
+                    category.text = book.categories[0].name
+                }
                 description.text = book.description
 
             }, {
